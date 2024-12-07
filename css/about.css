@@ -444,6 +444,21 @@ footer .clock-box {
   main .container-main .skill .skill-box {
     height: 70%;
   }
+
+  main .container-main .desc .desc-image .desc-image-box {
+    width: 100%;
+    height: 90%;
+    /* background-color: #0cb112; */
+  }
+
+  main .container-main .title {
+    width: 100%;
+    height: 5%;
+  }
+
+  main .container-main .desc .desc-text {
+    width: 95%;
+  }
 }
 
 /*Phone */
