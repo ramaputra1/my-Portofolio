@@ -1,0 +1,260 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, #0c6fb1, #18222c);
+  background-size: 200% 200%;
+  animation: gradientBackground 8s ease infinite;
+
+  font-family: "Poppins";
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  width: 100%;
+  height: 20%;
+  display: flex;
+}
+
+header .title {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header .title .title-box {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+header .title .title-box a {
+  font-size: 3rem;
+  margin: 0 1em;
+  font-weight: 600;
+  background: linear-gradient(to right, #b6fbff, #83a4d4);
+
+  background-clip: text;
+  color: transparent;
+}
+
+header .navbar {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+header .navbar .navbar-items {
+  margin: 1em 1em;
+}
+
+header .navbar #projects {
+  margin-right: 5em;
+}
+
+header .navbar .navbar-items a {
+  font-size: 1.3rem;
+  background: linear-gradient(to right, #b6fbff, #83a4d4);
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+header .navbar .navbar-items a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+
+  top: 30px;
+  width: 0;
+  height: 2px;
+  background-color: #83a4d4;
+  transition: width 0.2s ease-in-out;
+}
+
+header .navbar .navbar-items a:hover::after {
+  width: 100%;
+}
+
+/*Main*/
+main {
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+
+main .text {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main .text .text-box {
+  width: 80%;
+  height: 100%;
+  margin-top: 2.5em;
+}
+
+main .text .text-box p {
+  font-size: 2rem;
+  margin: 1em 0;
+
+  background: linear-gradient(to right, #b6fbff, #83a4d4);
+
+  background-clip: text;
+  color: transparent;
+}
+
+main .text .text-box a {
+  font-size: 1.6rem;
+  margin: 0.5em 0.5em;
+  background: linear-gradient(to right, #b6fbff, #83a4d4);
+
+  background-clip: text;
+  color: transparent;
+}
+
+main .text .text-box #github:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+main .text .text-box #linkedin:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+main .text .text-box #email:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+main .API {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  /* background-color: #ff0000; */
+}
+
+main .API .API-text {
+  margin: 0.5em 1em;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #dbfdff, #e6f0ff);
+  font-weight: 600;
+  background-clip: text;
+  color: transparent;
+}
+
+main .API #map {
+  width: 80%;
+  height: 80%;
+  border-radius: 25px;
+  border: 1px solid white;
+}
+
+main .API .box-my-time {
+  display: flex;
+}
+
+main .API .box-my-time div {
+  margin: 0.2em 0.3em;
+  background: linear-gradient(to right, hsl(184, 100%, 94%), #fcfdff);
+
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+main .API .box-my-time {
+  display: flex;
+}
+
+/*Footer*/
+footer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+footer .footer-box {
+  width: 50%;
+
+  margin: 0 2em;
+}
+
+footer .footer-box p {
+  background: linear-gradient(to right, #b6fbff, #83a4d4);
+
+  background-clip: text;
+  color: transparent;
+}
+
+footer #clock {
+  /* margin-right: 1em; */
+  font-size: 2rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #e3e3e3, #b6b4be);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1px;
+}
+
+footer .clock-box {
+  width: 50%;
+  margin-right: 3em;
+  display: flex;
+  justify-content: end;
+}
+
+/*MEdia Queries*/
+/*Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+  html {
+    font-size: 72.5%;
+  }
+
+  main {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  main .text {
+    width: 100%;
+    height: 80%;
+  }
+
+  main .API {
+    width: 100%;
+  }
+}
+
+/*Phone */
+@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+}

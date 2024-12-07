@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <!--My Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--My Icon-->
+    <script
+      src="https://kit.fontawesome.com/46e781b394.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <div class="title-box">
+          <a href="">Rama Putra</a>
+        </div>
+      </div>
+      <nav class="navbar">
+        <div class="navbar-items" id="me"><a href="">Me</a></div>
+        <div class="navbar-items" id="projects"><a href="">Projects</a></div>
+      </nav>
+    </header>
+    <main>
+      <div class="text">
+        <div class="text-box">
+          <p>
+            Aloha, I am Rama Adi Putra. <br />
+            Computer Science Major and Aspiring Web Developer.
+          </p>
+          <p>Let’s connect and build something amazing!</p>
+          <a id="github" href=""><i class="fa-brands fa-github"></i></a>
+          <a id="linkedin" href=""><i class="fa-brands fa-linkedin"></i></a>
+          <a id="email" href=""
+            ><i class="fa fa-envelope" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+      <div class="API">
+        <div class="API-text">
+          <p>MY LOCATION:</p>
+        </div>
+        <div id="map"></div>
+        <div class="box-my-time">
+          <div class="my-time-text">
+            <p>MY REAL TIME:</p>
+          </div>
+          <div id="my-time"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-box">
+        <p>&copy;Rama Putra, 2024.</p>
+      </div>
+      <div class="clock-box">
+        <div id="clock"></div>
+      </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByDJzSub0w3_2Lny8CYl83cZdRzwYw4u0&callback=initMap&v=weekly"
+      async
+      defer
+    ></script>
+  </body>
+</html>
