@@ -8,6 +8,19 @@ body {
   font-family: "Poppins";
 }
 
+body a,
+p {
+  background: linear-gradient(to right, #b6fbff, #83a4d4);
+
+  background-clip: text;
+  color: transparent;
+}
+
+body h4 {
+  color: #a6bccf;
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+
 @keyframes gradientBackground {
   0% {
     background-position: 0% 50%;
@@ -62,10 +75,6 @@ header .navbar .navbar-items {
   margin: 1em 1em;
 }
 
-header .navbar .navbar-items.active a {
-  color: white;
-}
-
 header .navbar #projects {
   margin-right: 5em;
 }
@@ -94,6 +103,10 @@ header .navbar .navbar-items a:hover::after {
   width: 100%;
 }
 
+header .navbar .navbar-items.active a {
+  color: white;
+}
+
 /*Main*/
 main {
   width: 100%;
@@ -110,7 +123,8 @@ main .container-main {
 /*1*/
 main .container-main .title {
   width: 100%;
-  height: 10%;
+  height: 5%;
+  /* background-color: yellow; */
 }
 
 main .container-main .title .title-box {
@@ -130,72 +144,12 @@ main .container-main .title .title-box p {
 }
 
 /*2*/
-main .container-main .desc {
-  width: 100%;
-  height: 33%;
-  background-color: rgba(54, 66, 83, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main .container-main .desc .desc-box {
-  width: 85%;
-  height: 90%;
-  /* background-color: rgb(18, 1, 50); */
-  display: flex;
-}
-
-main .container-main .desc .desc-image {
-  width: 30%;
-  height: 100%;
-  /* background-color: aqua; */
-  display: flex;
-  justify-content: center;
-  align-items: top;
-}
-
-main .container-main .desc .desc-image .desc-image-box {
-  width: 50%;
-  height: 68%;
-  /* background-color: #0cb112; */
-}
-
-main .container-main .desc .desc-image .desc-image-box img {
-  width: 100%;
-  height: 100%;
-  border: 1px solid rgb(255, 255, 255);
-  box-shadow: 5px 5px 10px rgb(0, 0, 0);
-}
-
-main .container-main .desc .desc-text {
-  width: 70%;
-  height: 100%;
-  /* background-color: red; */
-  display: flex;
-  justify-content: top;
-  align-items: top;
-  margin-left: 1em;
-}
-
-main .container-main .desc .desc-text .desc-text-box {
-  width: 90%;
-  height: 90%;
-}
-
-main .container-main .desc .desc-text .desc-text-box p {
-  margin: 0.8em 0;
-  font-size: 1.3rem;
-  background: linear-gradient(to right, #b6fbff, #83a4d4);
-  background-clip: text;
-  color: transparent;
-}
 
 /*3*/
 main .container-main .skill {
-  margin-top: 1em;
+  margin-top: 0.5em;
   width: 100%;
-  height: 30%;
+  height: 90%;
   /* background-color: rgba(74, 74, 74, 0.3); */
   display: flex;
   justify-content: center;
@@ -203,16 +157,18 @@ main .container-main .skill {
 }
 
 main .container-main .skill .skill-box {
-  width: 90%;
+  width: 100%;
   height: 90%;
   background-color: rgba(60, 63, 82, 0.3);
+
   display: flex;
   flex-direction: column;
 }
 
 main .container-main .skill .skill-box .skill-text {
   width: 100%;
-  height: 20%;
+  height: 10%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,30 +178,125 @@ main .container-main .skill .skill-box .skill-text {
   background: linear-gradient(to right, #b6fbff, #83a4d4);
   background-clip: text;
   color: transparent;
-  /* background-color: yellow; */
 }
 
 main .container-main .skill .skill-box .skill-list {
-  width: 100%;
-  height: 80%;
-  /* background-color: rgb(46, 46, 38); */
+  width: 80%;
+  height: 90%;
+
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 main .container-main .skill .skill-box .skill-list .skill-item {
-  width: 15%;
+  width: 95%;
   height: 80%;
-  /* background-color: hotpink; */
+
+  display: flex;
+  /* border: 1px solid white; */
+  margin: 1em 1em;
+  box-shadow: 5px 5px 10px black;
+  background-color: rgb(60, 61, 62, 0.65);
+}
+
+main
+  .container-main
+  .skill
+  .skill-box
+  .skill-list
+  .skill-item
+  .skill-item-left {
+  width: 25%;
+  height: 100%;
+  /* border: 1px solid white; */
+  /* background-color: rgb(48, 30, 39); */
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main
+  .container-main
+  .skill
+  .skill-box
+  .skill-list
+  .skill-item
+  .skill-item-right {
+  width: 75%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+main
+  .container-main
+  .skill
+  .skill-box
+  .skill-list
+  .skill-item
+  .skill-item-right
+  .skill-item-right-text {
+  display: flex;
+  flex-direction: column;
+}
+
+main
+  .container-main
+  .skill
+  .skill-box
+  .skill-list
+  .skill-item
+  .skill-item-right
+  .skill-item-right-text
+  h4 {
   margin: 0 1em;
+}
+
+main
+  .container-main
+  .skill
+  .skill-box
+  .skill-list
+  .skill-item
+  .skill-item-right
+  .skill-item-right-text
+  p {
+  margin: 0 1em;
+}
+
+main
+  .container-main
+  .skill
+  .skill-box
+  .skill-list
+  .skill-item
+  .skill-item-right
+  .skill-item-right-text
+  p:first-of-type {
+  margin-bottom: 1em;
+}
+
+main
+  .container-main
+  .skill
+  .skill-box
+  .skill-list
+  .skill-item
+  .skill-item-right
+  .skill-item-right-text
+  .inside-right-text {
+  display: flex;
 }
 
 main .container-main .skill .skill-box .skill-list .skill-item .skill-icon {
-  width: 100%;
+  width: 80%;
   height: 80%;
   /* background-color: rgb(40, 17, 188); */
   display: flex;
@@ -253,131 +304,18 @@ main .container-main .skill .skill-box .skill-list .skill-item .skill-icon {
   align-items: center;
 }
 
-main .container-main .skill .skill-box .skill-list .skill-item .skill-icon i {
-  font-size: 5rem;
-  color: white;
-  background: linear-gradient(to right, #b6fbff, #83a4d4);
-  background-clip: text;
-  color: transparent;
+main .container-main .skill .skill-box .skill-list .skill-item .skill-icon img {
+  width: 100%;
+  height: 80%;
+  /* background-color: rgb(40, 17, 188); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px black;
 }
 
 main .container-main .skill .skill-box .skill-list .skill-item .skill-texts {
-  width: 100%;
-  height: 20%;
-  /* background-color: rgb(17, 188, 63); */
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  font-size: 1rem;
-  background: linear-gradient(to right, #b6fbff, #83a4d4);
-  background-clip: text;
-  color: transparent;
-}
-
-/*contact*/
-
-main .container-main .contact {
-  margin-top: 1em;
-  width: 100%;
-  height: 30%;
-  /* background-color: rgba(74, 74, 74, 0.3); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main .container-main .contact .contact-box {
-  width: 90%;
-  height: 90%;
-  background-color: rgba(35, 42, 87, 0.3);
-  display: flex;
-  flex-direction: column;
-}
-
-main .container-main .contact .contact-box .contact-text {
-  width: 100%;
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  color: white;
-  font-weight: 600;
-  background: linear-gradient(to right, #b6fbff, #83a4d4);
-  background-clip: text;
-  color: transparent;
-  /* background-color: yellow; */
-}
-
-main .container-main .contact .contact-box .contact-list {
-  width: 100%;
-  height: 80%;
-  /* background-color: rgb(46, 46, 38); */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-main .container-main .contact .contact-box .contact-list .contact-item {
-  width: 15%;
-  height: 80%;
-  /* background-color: hotpink; */
-  display: flex;
-  flex-direction: column;
-  margin: 0 1em;
-}
-
-main
-  .container-main
-  .contact
-  .contact-box
-  .contact-list
-  .contact-item
-  .contact-icon {
-  width: 100%;
-  height: 80%;
-  /* background-color: rgb(40, 17, 188); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main
-  .container-main
-  .contact
-  .contact-box
-  .contact-list
-  .contact-item
-  .contact-icon
-  i:hover {
-  color: white;
-  text-shadow: 1px 1px 1px white;
-}
-
-main
-  .container-main
-  .contact
-  .contact-box
-  .contact-list
-  .contact-item
-  .contact-icon
-  i {
-  font-size: 5rem;
-  color: white;
-  background: linear-gradient(to right, #b6fbff, #83a4d4);
-  background-clip: text;
-  color: transparent;
-}
-
-main
-  .container-main
-  .contact
-  .contact-box
-  .contact-list
-  .contact-item
-  .contact-texts {
-  width: 100%;
+  width: 80%;
   height: 20%;
   /* background-color: rgb(17, 188, 63); */
   display: flex;
@@ -442,6 +380,17 @@ footer .clock-box {
     font-size: 72.5%;
   }
 
+  body {
+    height: 190vh;
+  }
+  header {
+    height: 15%;
+  }
+  main {
+    height: 80%;
+    /* background-color: red; */
+  }
+
   main .desc-box {
     flex-direction: column;
     justify-content: start;
@@ -458,13 +407,12 @@ footer .clock-box {
   }
 
   main .container-main .skill .skill-box {
-    height: 70%;
+    height: 90%;
   }
 
   main .container-main .desc .desc-image .desc-image-box {
     width: 100%;
     height: 90%;
-    /* background-color: #0cb112; */
   }
 
   main .container-main .title {
@@ -475,15 +423,51 @@ footer .clock-box {
   main .container-main .desc .desc-text {
     width: 95%;
   }
+
+  main .container-main .skill .skill-box .skill-list .skill-item .skill-icon {
+    height: 40%;
+  }
 }
 
 /*Phone */
 @media (max-width: 480px) {
   html {
-    font-size: 55%;
+    font-size: 50%;
+  }
+
+  body {
+    height: 180vh;
   }
 
   main .container-main .skill {
     align-items: end;
+  }
+
+  main .container-main .skill .skill-box .skill-list .skill-item {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main .container-main .skill .skill-box {
+    height: 100%;
+  }
+
+  main
+    .container-main
+    .skill
+    .skill-box
+    .skill-list
+    .skill-item
+    .skill-item-right {
+    width: 95%;
+  }
+
+  main .container-main .skill .skill-box .skill-list .skill-item {
+    width: 95%;
+    height: 100%;
+  }
+
+  main .container-main .skill .skill-box .skill-list .skill-item .skill-icon {
+    height: 50%;
   }
 }
