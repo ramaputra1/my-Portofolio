@@ -508,4 +508,8 @@ footer .clock-box {
     width: 100%;
     height: 100%;
   }
+
+  main .container-main .skill .skill-box .skill-list .skill-item {
+    margin: 2em 1em;
+  }
 }
