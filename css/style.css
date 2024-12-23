@@ -1,22 +1,28 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(45deg, #0c6fb1, #18222c);
-  background-size: 200% 200%;
-  animation: gradientBackground 8s ease infinite;
+  background: linear-gradient(10deg, #0c92eb, #011f2a);
+  background-size: 300% 550%;
+  animation: gradientBackground 14s ease-in-out infinite;
 
   font-family: "Poppins";
 }
 
 @keyframes gradientBackground {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 50% 50%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 50% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 5% 5%;
   }
 }
 
@@ -40,14 +46,23 @@ header .title .title-box {
   justify-content: center;
 }
 
-header .title .title-box a {
-  font-size: 3rem;
+header .title .title-box p a {
+  font-size: 4rem;
   margin: 0 1em;
+  border: 2px solid rgb(131, 164, 212, 0.5);
+  border-radius: 100px;
+
+  padding: 0 0.35em;
   font-weight: 600;
   background: linear-gradient(to right, #b6fbff, #83a4d4);
-
   background-clip: text;
   color: transparent;
+  /* text-decoration: underline; */
+}
+
+header .title .title-box p a:hover {
+  transition: 0.1s;
+  opacity: 0.7;
 }
 
 header .navbar {
@@ -107,23 +122,104 @@ main .text {
 main .text .text-box {
   width: 80%;
   height: 100%;
-  margin-top: 2.5em;
+}
+
+main .text .text-box .name {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 0em;
+  background: linear-gradient(to right, #c0e2ff, rgba(255, 255, 255, 0.937));
+  /* background-size: 35% 200%;
+  animation: gradientBackground 5s ease infinite; */
+  background-clip: text;
+  color: transparent;
+  text-shadow: 3px 3px 5px rgb(255, 255, 255, 0.3);
 }
 
 main .text .text-box p {
-  font-size: 2rem;
-  margin: 1em 0;
-
+  font-size: 1rem;
+  margin: 0 0;
+  font-weight: 600;
   background: linear-gradient(to right, #b6fbff, #83a4d4);
 
   background-clip: text;
   color: transparent;
 }
 
+main .text .text-box p:nth-child(3) span {
+  /* margin: 0.2em 0;
+  font-size: 1.6rem; */
+  /* text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.4); */
+  font-weight: 700;
+  font-size: 1.5rem;
+  /* border-bottom: 1px solid white; */
+}
+
+main .text .text-box p:nth-child(2) {
+  margin-bottom: 1.7em 0;
+  /* font-size: 1.2rem; */
+}
+
+main .text .text-box p:nth-child(2) .byuh a {
+  font-size: 1.3rem;
+  background: linear-gradient(to right, #e2f4f5, #d0d4da);
+  background-clip: text;
+  color: transparent;
+
+  margin: 0;
+  /* color: #ffffff; */
+}
+
+main .text .text-box p:nth-child(2) .byuh a:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+main .text .text-box p:nth-child(2) .course {
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #e2f4f5, #d0d4da);
+  background-clip: text;
+  color: transparent;
+  /* font-style: italic; */
+  border-bottom: 1px solid white;
+}
+
+main .text .text-box p:nth-child(3) {
+  font-size: 1.4rem;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+  background: linear-gradient(to right, #f4feff, #f4feff);
+  background-clip: text;
+  color: transparent;
+  font-weight: 500;
+}
+
+main .text .text-box p:nth-child(3) span {
+  font-size: 1.7rem;
+  background: linear-gradient(to right, #ffffff, rgba(188, 14, 130, 0.5));
+  background-clip: text;
+  color: transparent;
+
+  background-size: 300% 550%;
+  animation: gradientBackground 6s ease-in-out infinite;
+  font-weight: 600;
+  /* font-weight: 700; */
+  /* font-size: 1.5rem; */
+  /* border-bottom: 1px solid white; */
+}
+
+/* main .text .text-box p:nth-child(4) {
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+} */
+
 main .text .text-box a {
   font-size: 1.6rem;
   margin: 0.5em 0.5em;
-  background: linear-gradient(to right, #b6fbff, #83a4d4);
+  background: linear-gradient(to right, #e2f4f5, #ccd6e6);
 
   background-clip: text;
   color: transparent;
@@ -131,14 +227,17 @@ main .text .text-box a {
 
 main .text .text-box #github:hover {
   color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 15px rgb(255, 255, 255);
 }
 
 main .text .text-box #linkedin:hover {
   color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 15px rgb(255, 255, 255);
 }
 
 main .text .text-box #email:hover {
   color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 15px rgb(255, 255, 255);
 }
 
 main .API {
@@ -223,7 +322,7 @@ footer .clock-box {
   justify-content: end;
 }
 
-/*MEdia Queries*/
+/*Media Queries*/
 /*Laptop */
 @media (max-width: 1366px) {
   html {

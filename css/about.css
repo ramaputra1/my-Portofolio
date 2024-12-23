@@ -1,22 +1,28 @@
 body {
   width: 98.9vw;
-  height: 200vh;
-  background: linear-gradient(45deg, #0c6fb1, #18222c);
-  background-size: 200% 200%;
-  animation: gradientBackground 8s ease infinite;
+  height: 250vh;
+  background: linear-gradient(10deg, #0c92eb, #011f2a);
+  background-size: 300% 550%;
+  animation: gradientBackground 14s ease-in-out infinite;
 
   font-family: "Poppins";
 }
 
 @keyframes gradientBackground {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 50% 50%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 50% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 5% 5%;
   }
 }
 
@@ -40,14 +46,23 @@ header .title .title-box {
   justify-content: center;
 }
 
-header .title .title-box a {
-  font-size: 3rem;
+header .title .title-box p a {
+  font-size: 4rem;
   margin: 0 1em;
+  border: 2px solid rgb(131, 164, 212, 0.5);
+  border-radius: 100px;
+
+  padding: 0 0.35em;
   font-weight: 600;
   background: linear-gradient(to right, #b6fbff, #83a4d4);
-
   background-clip: text;
   color: transparent;
+  /* text-decoration: underline; */
+}
+
+header .title .title-box p a:hover {
+  transition: 0.1s;
+  opacity: 0.7;
 }
 
 header .navbar {
@@ -132,7 +147,7 @@ main .container-main .title .title-box p {
 /*2*/
 main .container-main .desc {
   width: 100%;
-  height: 33%;
+  height: 50%;
   background-color: rgba(54, 66, 83, 0.1);
   display: flex;
   justify-content: center;
@@ -147,8 +162,8 @@ main .container-main .desc .desc-box {
 }
 
 main .container-main .desc .desc-image {
-  width: 30%;
-  height: 100%;
+  width: 52%;
+  height: 92%;
   /* background-color: aqua; */
   display: flex;
   justify-content: center;
@@ -156,8 +171,8 @@ main .container-main .desc .desc-image {
 }
 
 main .container-main .desc .desc-image .desc-image-box {
-  width: 50%;
-  height: 68%;
+  width: 80%;
+  height: 100%;
   /* background-color: #0cb112; */
 }
 
@@ -166,6 +181,8 @@ main .container-main .desc .desc-image .desc-image-box img {
   height: 100%;
   border: 1px solid rgb(255, 255, 255);
   box-shadow: 5px 5px 10px rgb(0, 0, 0);
+  object-fit: cover;
+  object-position: bottom;
 }
 
 main .container-main .desc .desc-text {
@@ -180,12 +197,31 @@ main .container-main .desc .desc-text {
 
 main .container-main .desc .desc-text .desc-text-box {
   width: 90%;
-  height: 90%;
+  height: 100%;
+}
+
+main .container-main .desc .desc-text .desc-text-box span {
+  margin: 0.2em 0;
+  /* font-size: 1.2rem; */
+  background: linear-gradient(to right, #b6fbff, #b6fbff);
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+main .container-main .desc .desc-text .desc-text-box span:nth-child(1) {
+  font-size: 1.8rem;
+}
+
+main .container-main .desc .desc-text .desc-text-box p .quote {
+  font-size: 1.6rem;
+  font-style: italic;
+  padding: 0 0.1em;
 }
 
 main .container-main .desc .desc-text .desc-text-box p {
-  margin: 0.8em 0;
-  font-size: 1.3rem;
+  margin: 0.2em 0;
+  font-size: 1.1rem;
   background: linear-gradient(to right, #b6fbff, #83a4d4);
   background-clip: text;
   color: transparent;
@@ -195,7 +231,7 @@ main .container-main .desc .desc-text .desc-text-box p {
 main .container-main .skill {
   margin-top: 1em;
   width: 100%;
-  height: 30%;
+  height: 20%;
   /* background-color: rgba(74, 74, 74, 0.3); */
   display: flex;
   justify-content: center;
@@ -203,11 +239,13 @@ main .container-main .skill {
 }
 
 main .container-main .skill .skill-box {
-  width: 90%;
+  width: 100%;
   height: 90%;
-  background-color: rgba(60, 63, 82, 0.3);
+  /* background-color: rgba(255, 0, 0, 0.3); */
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main .container-main .skill .skill-box .skill-text {
@@ -216,18 +254,25 @@ main .container-main .skill .skill-box .skill-text {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* background-color: yellow; */
+}
+
+main .container-main .skill .skill-box .skill-text p {
   font-size: 2rem;
   color: white;
   font-weight: 600;
   background: linear-gradient(to right, #b6fbff, #83a4d4);
   background-clip: text;
   color: transparent;
+  border-bottom: 2px solid #b6fbff;
   /* background-color: yellow; */
 }
 
 main .container-main .skill .skill-box .skill-list {
-  width: 100%;
+  width: 80%;
   height: 80%;
+  /* flex-wrap: wrap; */
   /* background-color: rgb(46, 46, 38); */
   display: flex;
   flex-direction: row;
@@ -236,17 +281,21 @@ main .container-main .skill .skill-box .skill-list {
 }
 
 main .container-main .skill .skill-box .skill-list .skill-item {
-  width: 15%;
-  height: 80%;
-  /* background-color: hotpink; */
+  width: 20%;
+  height: fit-content;
+  /* background-color: rgb(84, 19, 52); */
   display: flex;
+
   flex-direction: column;
-  margin: 0 1em;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  margin: 0 2.5em;
 }
 
 main .container-main .skill .skill-box .skill-list .skill-item .skill-icon {
-  width: 100%;
-  height: 80%;
+  width: fit-content;
+  height: fit-content;
   /* background-color: rgb(40, 17, 188); */
   display: flex;
   justify-content: center;
@@ -254,11 +303,17 @@ main .container-main .skill .skill-box .skill-list .skill-item .skill-icon {
 }
 
 main .container-main .skill .skill-box .skill-list .skill-item .skill-icon i {
-  font-size: 5rem;
+  font-size: 2rem;
   color: white;
   background: linear-gradient(to right, #b6fbff, #83a4d4);
   background-clip: text;
   color: transparent;
+}
+
+main .container-main .skill .skill-box .skill-list .skill-item:hover {
+  color: white;
+  text-shadow: 0 0 15px rgba(255, 255, 255);
+  cursor: default;
 }
 
 main .container-main .skill .skill-box .skill-list .skill-item .skill-texts {
@@ -279,7 +334,7 @@ main .container-main .skill .skill-box .skill-list .skill-item .skill-texts {
 main .container-main .contact {
   margin-top: 1em;
   width: 100%;
-  height: 30%;
+  height: 25%;
   /* background-color: rgba(74, 74, 74, 0.3); */
   display: flex;
   justify-content: center;
@@ -289,7 +344,7 @@ main .container-main .contact {
 main .container-main .contact .contact-box {
   width: 90%;
   height: 90%;
-  background-color: rgba(35, 42, 87, 0.3);
+  /* background-color: rgba(35, 42, 87, 0.3); */
   display: flex;
   flex-direction: column;
 }
@@ -300,13 +355,52 @@ main .container-main .contact .contact-box .contact-text {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* background-color: yellow; */
+}
+
+main .container-main .contact .contact-box .contact-text p {
   font-size: 2rem;
   color: white;
   font-weight: 600;
   background: linear-gradient(to right, #b6fbff, #83a4d4);
   background-clip: text;
   color: transparent;
+  border-bottom: 2px solid #b6fbff;
   /* background-color: yellow; */
+}
+
+main .container-main .contact .contact-box .contact-text-engage {
+  background-color: rgb(7, 27, 57, 0.5);
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.4em 0.6em;
+}
+
+main .container-main .contact .contact-box .contact-text-engage p {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(to right, #b6fbff, #83a4d4);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+main .container-main .contact .contact-box .contact-text-engage p a {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(to right, #b6fbff, #83a4d4);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  border-bottom: 1px solid #83a4d4;
+}
+
+main .container-main .contact .contact-box .contact-text-engage p a:hover {
+  text-shadow: 0 0 15px white;
 }
 
 main .container-main .contact .contact-box .contact-list {
@@ -321,11 +415,11 @@ main .container-main .contact .contact-box .contact-list {
 
 main .container-main .contact .contact-box .contact-list .contact-item {
   width: 15%;
-  height: 80%;
+  height: 50%;
   /* background-color: hotpink; */
   display: flex;
   flex-direction: column;
-  margin: 0 1em;
+  margin: 0 0;
 }
 
 main
@@ -343,16 +437,9 @@ main
   align-items: center;
 }
 
-main
-  .container-main
-  .contact
-  .contact-box
-  .contact-list
-  .contact-item
-  .contact-icon
-  i:hover {
+main .container-main .contact .contact-box .contact-list .contact-item:hover {
   color: white;
-  text-shadow: 1px 1px 1px white;
+  text-shadow: 0 0 15px rgb(255, 255, 255, 0.5);
 }
 
 main
@@ -363,7 +450,7 @@ main
   .contact-item
   .contact-icon
   i {
-  font-size: 5rem;
+  font-size: 3.5rem;
   color: white;
   background: linear-gradient(to right, #b6fbff, #83a4d4);
   background-clip: text;
@@ -442,6 +529,10 @@ footer .clock-box {
     font-size: 72.5%;
   }
 
+  body {
+    height: 340vh;
+  }
+
   main .desc-box {
     flex-direction: column;
     justify-content: start;
@@ -457,9 +548,9 @@ footer .clock-box {
     margin-top: 0.2rem;
   }
 
-  main .container-main .skill .skill-box {
+  /* main .container-main .skill .skill-box {
     height: 70%;
-  }
+  } */
 
   main .container-main .desc .desc-image .desc-image-box {
     width: 100%;
@@ -475,6 +566,31 @@ footer .clock-box {
   main .container-main .desc .desc-text {
     width: 95%;
   }
+
+  main .container-main .contact .contact-box .contact-list .contact-item {
+    width: 15%;
+    height: 30%;
+    /* background-color: hotpink; */
+    display: flex;
+    flex-direction: column;
+    margin: 0 1em;
+  }
+
+  main .container-main .desc .desc-image {
+    width: 40%;
+    height: 40%;
+  }
+
+  main .container-main .skill .skill-box .skill-list {
+    width: 100%;
+    height: 80%;
+    flex-wrap: wrap;
+    /* background-color: rgb(46, 46, 38); */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /*Phone */
@@ -483,7 +599,11 @@ footer .clock-box {
     font-size: 55%;
   }
 
-  main .container-main .skill {
-    align-items: end;
+  body {
+    height: 280vh;
   }
+
+  /* main .container-main .skill {
+    align-items: end;
+  } */
 }
