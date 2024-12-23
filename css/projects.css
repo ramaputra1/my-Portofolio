@@ -271,7 +271,7 @@ main
   .project-item
   .project-item-text
   p:nth-child(5) {
-  border: #83a4d4 2px solid;
+  border: #83a4d4 1px solid;
   display: inline-block;
   padding: 0.4em 0.4em;
   border-radius: 50px;
