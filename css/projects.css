@@ -16,7 +16,7 @@ body {
     background-position: 50% 50%;
   }
   50% {
-    background-position: 100% 100%;
+    background-position: 50% 50%;
   }
   75% {
     background-position: 50% 50%;
@@ -24,6 +24,17 @@ body {
   100% {
     background-position: 5% 5%;
   }
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 100ms;
+  transition-timing-function: ease-out;
+  z-index: -1;
 }
 
 body a,
@@ -178,7 +189,7 @@ main .container-main .project .project-box {
   width: 100%;
   height: 100%;
   /* background-color: rgba(0, 255, 132, 0.3); */
-
+  /* gap: 3em; */
   display: flex;
   flex-direction: column;
 }
@@ -186,11 +197,12 @@ main .container-main .project .project-box {
 main .container-main .project .project-box .project-text {
   width: 100%;
   height: 5%;
-  /* background-color: blue; */
+
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2em;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 main .container-main .project .project-box .project-text p {
@@ -201,6 +213,7 @@ main .container-main .project .project-box .project-text p {
   background: linear-gradient(to right, #b6fbff, #83a4d4);
   background-clip: text;
   color: transparent;
+  padding: 0;
 }
 
 main .container-main .project .project-box .project-item {
@@ -270,10 +283,11 @@ main
   .project-box
   .project-item
   .project-item-text
-  p:nth-child(5) {
+  p:nth-child(5)
+  a {
   border: #83a4d4 1px solid;
   display: inline-block;
-  padding: 0.4em 0.4em;
+  padding: 0.4em 0.8em;
   border-radius: 50px;
   background-color: #83a4d4;
 }
@@ -284,7 +298,8 @@ main
   .project-box
   .project-item
   .project-item-text
-  p:nth-child(5):hover {
+  p:nth-child(5)
+  a:hover {
   text-shadow: 0 0 2px white;
   box-shadow: 0 0 10px white;
 }
@@ -295,10 +310,11 @@ main
   .project-box
   .project-item
   .project-item-text
-  p:nth-child(6) {
+  p:nth-child(6)
+  a {
   border: #83a4d4 1px solid;
   display: inline-block;
-  padding: 0.4em 0.4em;
+  padding: 0.4em 0.8em;
   border-radius: 50px;
   background-color: #83a4d4;
 }
@@ -309,7 +325,8 @@ main
   .project-box
   .project-item
   .project-item-text
-  p:nth-child(6):hover {
+  p:nth-child(6)
+  a:hover {
   text-shadow: 0 0 2px white;
   box-shadow: 0 0 10px white;
 }
@@ -367,8 +384,9 @@ footer .clock-box {
     font-size: 72.5%;
   }
   body {
-    height: 340vh;
+    height: 240vh;
   }
+
   header {
     height: 5%;
   }
@@ -382,6 +400,26 @@ footer .clock-box {
   }
 
   main .container-main .project .project-box .project-item {
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    border-top: #83a4d4 1px solid;
+    /* border-bottom: #83a4d4 1px solid; */
+  }
+
+  main .container-main .project .project-box {
+    gap: 3em;
+  }
+
+  main .container-main .project .project-box .project-item .project-item-text {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+  }
+
+  /* main .container-main .project .project-box .project-item {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -396,18 +434,50 @@ footer .clock-box {
 
   main .container-main .project .project-box .project-item .project-item-img {
     border-top: #83a4d4 1px solid;
-  }
+  } */
 
   main .container-main .title {
     width: 100%;
     height: 2%;
-    /* background-color: yellow; */
+  }
+
+  main .container-main .project .project-box .project-item {
+    height: 25%;
+  }
+
+  main .container-main .project .project-box .project-item .project-item-text {
+    border-bottom: none;
+    border-top: none;
+  }
+
+  main .container-main .project .project-box .project-text {
+    width: 100%;
+    height: 3%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
   }
 }
 
 /*Phone */
 @media (max-width: 480px) {
   html {
-    font-size: 50%;
+    font-size: 60%;
   }
+
+  body {
+    height: 320vh;
+  }
+
+  /* main .container-main .project .project-box .project-item {
+    height: 25%;
+  }
+
+  main .container-main .project .project-box .project-item .project-item-text {
+    border-bottom: none;
+    border-top: none;
+  } */
 }

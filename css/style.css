@@ -1,8 +1,8 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(10deg, #0c92eb, #011f2a);
-  background-size: 300% 550%;
+  background: linear-gradient(35deg, #0c92eb, #011f2a);
+  background-size: 350% 550%;
   animation: gradientBackground 14s ease-in-out infinite;
 
   font-family: "Poppins";
@@ -16,7 +16,7 @@ body {
     background-position: 50% 50%;
   }
   50% {
-    background-position: 100% 100%;
+    background-position: 50% 50%;
   }
   75% {
     background-position: 50% 50%;
@@ -24,6 +24,17 @@ body {
   100% {
     background-position: 5% 5%;
   }
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 100ms;
+  transition-timing-function: ease-out;
+  z-index: -1;
 }
 
 header {
@@ -333,7 +344,7 @@ footer .clock-box {
 /*Tablet*/
 @media (max-width: 768px) {
   html {
-    font-size: 72.5%;
+    font-size: 93%;
   }
 
   main {
@@ -354,6 +365,6 @@ footer .clock-box {
 /*Phone */
 @media (max-width: 480px) {
   html {
-    font-size: 55%;
+    font-size: 70%;
   }
 }

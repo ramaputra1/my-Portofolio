@@ -16,7 +16,7 @@ body {
     background-position: 50% 50%;
   }
   50% {
-    background-position: 100% 100%;
+    background-position: 50% 50%;
   }
   75% {
     background-position: 50% 50%;
@@ -24,6 +24,17 @@ body {
   100% {
     background-position: 5% 5%;
   }
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 100ms;
+  transition-timing-function: ease-out;
+  z-index: -1;
 }
 
 header {
@@ -526,11 +537,23 @@ footer .clock-box {
 /*Tablet*/
 @media (max-width: 768px) {
   html {
-    font-size: 72.5%;
+    font-size: 95%;
   }
 
   body {
-    height: 340vh;
+    height: 250vh;
+  }
+
+  header {
+    height: 7%;
+  }
+
+  main {
+    height: 88%;
+  }
+
+  footer {
+    height: 5%;
   }
 
   main .desc-box {
@@ -552,6 +575,10 @@ footer .clock-box {
     height: 70%;
   } */
 
+  /* main .container-main .desc {
+    height: 35%;
+  } */
+
   main .container-main .desc .desc-image .desc-image-box {
     width: 100%;
     height: 90%;
@@ -559,8 +586,7 @@ footer .clock-box {
   }
 
   main .container-main .title {
-    width: 100%;
-    height: 5%;
+    height: 3%;
   }
 
   main .container-main .desc .desc-text {
@@ -594,13 +620,17 @@ footer .clock-box {
 }
 
 /*Phone */
-@media (max-width: 480px) {
+@media (max-width: 430px) {
   html {
-    font-size: 55%;
+    font-size: 65%;
+  }
+
+  main .container-main .title {
+    height: 5%;
   }
 
   body {
-    height: 280vh;
+    height: 300vh;
   }
 
   /* main .container-main .skill {
