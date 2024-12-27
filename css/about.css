@@ -530,14 +530,14 @@ footer .clock-box {
 /*Laptop */
 @media (max-width: 1366px) {
   html {
-    font-size: 80%;
+    font-size: 95%;
   }
 }
 
 /*Tablet*/
 @media (max-width: 768px) {
   html {
-    font-size: 95%;
+    font-size: 93%;
   }
 
   body {

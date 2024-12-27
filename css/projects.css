@@ -374,18 +374,18 @@ footer .clock-box {
 /*Laptop */
 @media (max-width: 1366px) {
   html {
-    font-size: 80%;
+    font-size: 90%;
   }
+
+  /* body {
+    height: 370vh;
+  } */
 
   main .container-main .project .project-box .project-item {
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     gap: 3em;
-  }
-
-  body {
-    height: 240vh;
   }
 
   main .container-main .project .project-box .project-item .project-item-text {
@@ -492,7 +492,7 @@ footer .clock-box {
   }
 
   body {
-    height: 390vh;
+    height: 350vh;
   }
 
   main .container-main .project .project-box .project-item {
@@ -523,16 +523,18 @@ footer .clock-box {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1em;
   }
 
   main .container-main .project .project-box .project-item .project-item-text {
     width: 70%;
     border-bottom: none;
     border-top: none;
-    /* text-align: center; */
   }
 
   main .container-main .project .project-box .project-item .project-item-img {
     border-top: #83a4d4 1px solid;
+    height: 70%;
+    /* border: 1px solid white; */
   }
 }
